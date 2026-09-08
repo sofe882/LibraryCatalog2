@@ -4,15 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using LibraryCatalog.Data;
 
 namespace LibraryCatalog.Logic;
 
 public class BookService
 {
-    private readonly BookRepository _repository = new();
+    private readonly IBookRepository _repository;
 
-    public List<Book> GetOldBooks() => _repository.GetAll()
-        .Where(book => book.Year < 2000)
-        .ToList();
+    public BookService(IBookRepository repository)
+    {
+        _repository = repository;
+    }
+
+    public List<Book> GetOldBooks()
+    {
+        return _repository.GetAll()
+            .Where(book => book.Year < 2000)
+            .ToList();
+    }
 }
