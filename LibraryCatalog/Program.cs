@@ -1,6 +1,12 @@
-﻿using LibraryCatalog.Logic;
+﻿
+using LibraryCatalog.Data;
+using LibraryCatalog.Logic;
 
-var service = new BookService();
+
+IBookRepository repository = new BookRepository();   
+
+var service = new BookService(repository);
+
 Console.WriteLine("Книги, изданные до 2000 года:");
 foreach (var book in service.GetOldBooks())
 {

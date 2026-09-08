@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using LibraryCatalog.Logic;   
+
 namespace LibraryCatalog.Data;
 
-public class BookRepository
+public class BookRepository : IBookRepository
 {
     private readonly List<Book> _books = new()
     {

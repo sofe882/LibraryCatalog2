@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LibraryCatalog.Logic\LibraryCatalog.Logic.csproj" />
+    <ProjectReference Include="..\LibraryCatalog.Data\LibraryCatalog.Data.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
