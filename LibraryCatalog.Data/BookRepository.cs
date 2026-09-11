@@ -21,4 +21,8 @@ public class BookRepository : IBookRepository
     };
 
     public List<Book> GetAll() => _books;
+    public void Add(Book item)
+    {
+        _books.Add(item);
+    }
 }

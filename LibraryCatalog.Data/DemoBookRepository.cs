@@ -12,4 +12,8 @@ public class DemoBookRepository : IBookRepository
             new Book { Id = 101, Title = "Просто книга ", Year = 1985 }
         };
     }
+    public void Add(Book item)
+    {
+      
+    }
 }
